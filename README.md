@@ -40,13 +40,13 @@ git clone https://github.com/staifa/wezterm-fnl.git ~/.config/wezterm
 
 ## Usage
 
-Open `wezterm.fnl` file in the Wezterm config directory - that would be `~/.config/wezterm/wezterm.fnl` in the abive example. Edit. Changes are recompiled after each save. Create and require other `fnl` files in root of the configuration and its subdirectories as you see fit. Root directory must contain least `.nfnl.fnl`, `nfnl` library and `wezterm.lua` for everything to work correctly.
+Open `wezterm.fnl` file in the Wezterm config directory - that would be `~/.config/wezterm/wezterm.fnl` in the above example. Edit. Changes are recompiled after each save. Create and require other `fnl` files in the root of the configuration and its subdirectories as you see fit. Root directory must contain at least `.nfnl.fnl`, `nfnl` library and `wezterm.lua` for everything to work correctly.
 
 There is an example `fnl` file - `config.tabline`. See the import and usage in `wezterm.fnl`.
 
 When an exception is thrown, the compiler stops. The root cause is usually found in the wezterm's debug overlay (default mapping `Ctrl + Shift + L`). After fixing the issue, run `:NfnlCompileAllFiles`.
 
-`Nfnl` provides an additional utility function - `:NfnlFile`. It runs the mathing `lua` file. It doesn't compile the `fnl` file from which it is called.
+`Nfnl` provides an additional utility function - `:NfnlFile`. It runs the matching `lua` file. It doesn't compile the `fnl` file from which it is called.
 
 [Plenary](https://github.com/nvim-lua/plenary.nvim) is included. Provides extremely handy functions.
 [Nfnl standard library](https://github.com/Olical/nfnl/tree/main/docs/api/) is included. Many core functions from [Clojure](https://clojure.org/) are implemented and live in `nfnl.core` namespace. `map` and `reduce` baby!
